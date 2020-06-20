@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>ML Deployment</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+<body>
+ <div class="login">
+	<h1>Predict Seed target</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	 
+    	<input type="text" name="A" placeholder="A" required="required" /> <br> <br>
+        <input type="text" name="P" placeholder="P" required="required" /> <br> <br>
+		<input type="text" name="C" placeholder="C" required="required" /> <br> <br>
+		<input type="text" name="LK" placeholder="LK" required="required" /> <br> <br>
+
+<input type="text" name="WK" placeholder="WK" required="required" /> <br> <br>
+		<input type="text" name="A_Coef" placeholder="A_Coef" required="required" /> <br> <br>
+		<input type="text" name="LKG" placeholder="LKG" required="required" /> <br> <br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+ </div>
+</body>
+</html>
