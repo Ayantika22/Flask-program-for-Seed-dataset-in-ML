@@ -4,7 +4,7 @@ Here Flask program for Seed dataset is shown.
 
 This Flask program is used to display the Prediction of Seed Target.
 
-Iris dataset are taken into consider to form a wed-based Flask App.
+Seed dataset are taken into consider to form a wed-based Flask App.
 
 Install Anaconda(Open Source Package)
 
